@@ -1,0 +1,102 @@
+:root {
+  --primary-color: #252324;
+  --secondary-color: #333333;
+  --background-color: #242424;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+header {
+  height: 100vh;
+  background: var(--background-color);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+#about {
+  background-color: #000;
+}
+#about .row {
+  overflow: hidden;
+}
+#about .row div:nth-child(1) {
+  background: var(--primary-color);
+  transform: translate(100px, -20px);
+  z-index: 3;
+}
+#about .row div:nth-child(2) {
+  background: var(--secondary-color);
+  transform: translate(-40px, 100px);
+}
+
+@media only screen and (max-width: 576px) {
+  #about .row div:nth-child(1) {
+    transform: translate(0px, 0px);
+    z-index: 0;
+  }
+}
+#questions {
+  background: var(--secondary-color);
+}
+#questions .accordion-item {
+  border-color: var(--secondary-color);
+}
+#questions .accordion-item .accordion-button:focus {
+  z-index: 3;
+  border-color: #000;
+  box-shadow: none;
+}
+#questions .accordion-item .accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: var(--background-color);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.13);
+}
+#questions .accordion-item .accordion-button::after {
+  width: auto;
+  height: auto;
+  content: "+";
+  font-size: 40px;
+  background-image: none;
+  font-weight: 100;
+  color: #333;
+  transform: translateY(-4px);
+}
+#questions .accordion-item .accordion-button:not(.collapsed)::after {
+  width: auto;
+  height: auto;
+  background-image: none;
+  color: rgb(201, 199, 199);
+  content: "-";
+  font-size: 48px;
+  transform: translate(-5px, -4px);
+  transform: rotate(0deg);
+}
+#questions .accordion-item .accordion-body {
+  color: #333;
+}/*# sourceMappingURL=style.css.map */
